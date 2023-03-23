@@ -50,7 +50,7 @@ void * nextList(List * list) {
 }
 
 void * lastList(List * list) {
-  if(list==NULL || list->current==NULL || list->current->next==NULL)return NULL;
+  if(list->current==NULL || list->current->next==NULL)return NULL;
 
   while(list->current->next!=NULL){
     list->current=list->current->next;
@@ -131,6 +131,7 @@ void * popCurrent(List * list) {
       list->current = NULL;
     }
   }    
+  
   free(list->current);
   return datoBorrado;
    
