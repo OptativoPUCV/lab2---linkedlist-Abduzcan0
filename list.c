@@ -116,22 +116,20 @@ void * popCurrent(List * list) {
       list->tail->next = NULL;
       list->current = NULL;
     
-    }else{
+  }else if(list->current == list->head){
     
-      if(list->current == list->head){
         list->head = list->current->next;
         list->head->prev = NULL;
         list->current = NULL;
-
-        
-    }else{
+       
+  }else{
         
       list->current->prev->next = list->current->next;
       list->current->next->prev = list->current->prev;
       list->current = NULL;
-    }
-  }    
-  
+    
+  }  
+
   free(list->current);
   return datoBorrado;
    
