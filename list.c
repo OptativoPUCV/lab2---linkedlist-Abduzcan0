@@ -84,6 +84,20 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
+  // Crear un nuevo nodo con el dato dado
+    Node *n = createNode(data);
+    
+
+    if (list->current == NULL) {
+        // Si no hay nodo actual, establecer el nuevo nodo como cabeza
+        list->head = n ;
+        list->current = n ;
+    } else {
+        // Insertar el nuevo nodo después del nodo actual
+        n->next = list->current->next;
+        list->current->next = n ;
+        list->current = n ;
+    }
 }
 
 void * popFront(List * list) {
