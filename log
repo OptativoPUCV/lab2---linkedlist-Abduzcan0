@@ -196,3 +196,9 @@ Thu 23 Mar 2023 08:04:13 PM UTC:
  tests:  11|1
 total_score: 60/70
 65dd4d6
+Thu 23 Mar 2023 09:13:54 PM UTC: 
+ list.c | 19 ++++++++++---------
+ 1 file changed, 10 insertions(+), 9 deletions(-)
+ tests:  12|0
+total_score: 70/70
+839ae9a
