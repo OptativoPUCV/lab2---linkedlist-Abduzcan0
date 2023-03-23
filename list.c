@@ -90,7 +90,7 @@ void pushCurrent(List * list, void * data) {
     list->current = n ;
   } else {
     list->current->next = n ;
-    list->tail=n;
+    
     n->prev=list->current;
   }
 }
